@@ -13,6 +13,11 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class Conversion {
     
+    /* Identifier for the job conversion. */
+    [DataMember(Name="id", EmitDefaultValue=false)]
+    public string Id { get; set; }
+
+    
     /* Identifier for the job conversion type. */
     [DataMember(Name="target", EmitDefaultValue=false)]
     public string Target { get; set; }
@@ -36,6 +41,8 @@ namespace IO.Swagger.Model {
     public override string ToString()  {
       var sb = new StringBuilder();
       sb.Append("class Conversion {\n");
+      
+      sb.Append("  Id: ").Append(Id).Append("\n");
       
       sb.Append("  Target: ").Append(Target).Append("\n");
       

@@ -130,9 +130,9 @@ namespace IO.Swagger.Api {
 
        if (ConversionId != null) queryParams.Add("conversion_id", apiClient.ParameterToString(ConversionId)); // query parameter
        if (InputId != null) queryParams.Add("input_id", apiClient.ParameterToString(InputId)); // query parameter
-       if (Key != null) queryParams.Add("key", apiClient.ParameterToString(Key)); // query parameter
       
        if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
+       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
       
       
       
@@ -174,9 +174,9 @@ namespace IO.Swagger.Api {
 
        if (ConversionId != null) queryParams.Add("conversion_id", apiClient.ParameterToString(ConversionId)); // query parameter
        if (InputId != null) queryParams.Add("input_id", apiClient.ParameterToString(InputId)); // query parameter
-       if (Key != null) queryParams.Add("key", apiClient.ParameterToString(Key)); // query parameter
       
        if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
+       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
       
       
       
@@ -219,9 +219,9 @@ namespace IO.Swagger.Api {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
-       if (Key != null) queryParams.Add("key", apiClient.ParameterToString(Key)); // query parameter
       
        if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
+       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
       
       
       
@@ -265,9 +265,9 @@ namespace IO.Swagger.Api {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
-       if (Key != null) queryParams.Add("key", apiClient.ParameterToString(Key)); // query parameter
       
        if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
+       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
       
       
       
@@ -310,9 +310,9 @@ namespace IO.Swagger.Api {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
-       if (Key != null) queryParams.Add("key", apiClient.ParameterToString(Key)); // query parameter
       
        if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
+       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
       
       
       
@@ -356,9 +356,9 @@ namespace IO.Swagger.Api {
       var fileParams = new Dictionary<String, String>();
       String postBody = null;
 
-       if (Key != null) queryParams.Add("key", apiClient.ParameterToString(Key)); // query parameter
       
        if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
+       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
       
       
       
