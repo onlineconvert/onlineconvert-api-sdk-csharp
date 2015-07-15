@@ -13,58 +13,58 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of binary source files for the conversion.hhh Description of the get for the inputs of a specific job.
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<InputFile></returns>
-    List<InputFile> JobsJobIdInputGet (string Token, string Key, string JobId);
+    List<InputFile> JobsJobIdInputGet (string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Get list of binary source files for the conversion.hhh Description of the get for the inputs of a specific job.
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<InputFile></returns>
-    Task<List<InputFile>> JobsJobIdInputGetAsync (string Token, string Key, string JobId);
+    Task<List<InputFile>> JobsJobIdInputGetAsync (string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Cretes a new input for the current job. 
     /// </summary>
-    /// <param name="Body"></param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body"></param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>InputFile</returns>
-    InputFile JobsJobIdInputPost (InputFile Body, string Token, string Key, string JobId);
+    InputFile JobsJobIdInputPost (InputFile Body, string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Cretes a new input for the current job. 
     /// </summary>
-    /// <param name="Body"></param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body"></param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>InputFile</returns>
-    Task<InputFile> JobsJobIdInputPostAsync (InputFile Body, string Token, string Key, string JobId);
+    Task<InputFile> JobsJobIdInputPostAsync (InputFile Body, string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    InputFile JobsJobIdInputFileIdGet (string Token, string Key, string JobId, string FileId);
+    InputFile JobsJobIdInputFileIdGet (string XOcToken, string XOcApiKey, string JobId, string FileId);
 
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    Task<InputFile> JobsJobIdInputFileIdGetAsync (string Token, string Key, string JobId, string FileId);
+    Task<InputFile> JobsJobIdInputFileIdGetAsync (string XOcToken, string XOcApiKey, string JobId, string FileId);
     
     /// <summary>
     /// Removes the input for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    InputFile JobsJobIdInputFileIdDelete (string Token, string Key, string JobId, string FileId);
+    InputFile JobsJobIdInputFileIdDelete (string XOcToken, string XOcApiKey, string JobId, string FileId);
 
     /// <summary>
     /// Removes the input for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    Task<InputFile> JobsJobIdInputFileIdDeleteAsync (string Token, string Key, string JobId, string FileId);
+    Task<InputFile> JobsJobIdInputFileIdDeleteAsync (string XOcToken, string XOcApiKey, string JobId, string FileId);
     
   }
 
@@ -122,9 +122,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of binary source files for the conversion.hhh Description of the get for the inputs of a specific job.
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<InputFile></returns>
-    public List<InputFile> JobsJobIdInputGet (string Token, string Key, string JobId) {
+    public List<InputFile> JobsJobIdInputGet (string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -143,8 +143,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -164,9 +164,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Get list of binary source files for the conversion.hhh Description of the get for the inputs of a specific job.
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<InputFile></returns>
-    public async Task<List<InputFile>> JobsJobIdInputGetAsync (string Token, string Key, string JobId) {
+    public async Task<List<InputFile>> JobsJobIdInputGetAsync (string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -185,8 +185,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -205,9 +205,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Cretes a new input for the current job. 
     /// </summary>
-    /// <param name="Body"></param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body"></param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>InputFile</returns>
-    public InputFile JobsJobIdInputPost (InputFile Body, string Token, string Key, string JobId) {
+    public InputFile JobsJobIdInputPost (InputFile Body, string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -226,8 +226,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -248,9 +248,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Cretes a new input for the current job. 
     /// </summary>
-    /// <param name="Body"></param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body"></param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>InputFile</returns>
-    public async Task<InputFile> JobsJobIdInputPostAsync (InputFile Body, string Token, string Key, string JobId) {
+    public async Task<InputFile> JobsJobIdInputPostAsync (InputFile Body, string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -269,8 +269,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -290,9 +290,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    public InputFile JobsJobIdInputFileIdGet (string Token, string Key, string JobId, string FileId) {
+    public InputFile JobsJobIdInputFileIdGet (string XOcToken, string XOcApiKey, string JobId, string FileId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -315,8 +315,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -336,9 +336,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    public async Task<InputFile> JobsJobIdInputFileIdGetAsync (string Token, string Key, string JobId, string FileId) {
+    public async Task<InputFile> JobsJobIdInputFileIdGetAsync (string XOcToken, string XOcApiKey, string JobId, string FileId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -361,8 +361,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -381,9 +381,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Removes the input for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    public InputFile JobsJobIdInputFileIdDelete (string Token, string Key, string JobId, string FileId) {
+    public InputFile JobsJobIdInputFileIdDelete (string XOcToken, string XOcApiKey, string JobId, string FileId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -406,8 +406,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -427,9 +427,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Removes the input for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="FileId">Id of the file to download</param>
     /// <returns>InputFile</returns>
-    public async Task<InputFile> JobsJobIdInputFileIdDeleteAsync (string Token, string Key, string JobId, string FileId) {
+    public async Task<InputFile> JobsJobIdInputFileIdDeleteAsync (string XOcToken, string XOcApiKey, string JobId, string FileId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -452,8 +452,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       

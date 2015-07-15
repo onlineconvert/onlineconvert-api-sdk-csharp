@@ -13,58 +13,58 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Conversion></returns>
-    List<Conversion> JobsJobIdConversionsGet (string Token, string Key, string JobId);
+    List<Conversion> JobsJobIdConversionsGet (string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Conversion></returns>
-    Task<List<Conversion>> JobsJobIdConversionsGetAsync (string Token, string Key, string JobId);
+    Task<List<Conversion>> JobsJobIdConversionsGetAsync (string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Adds a new conversion to the given job. 
     /// </summary>
-    /// <param name="Body">information for the conversion.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">information for the conversion.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Conversion</returns>
-    Conversion JobsJobIdConversionsPost (Conversion Body, string Token, string Key, string JobId);
+    Conversion JobsJobIdConversionsPost (Conversion Body, string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Adds a new conversion to the given job. 
     /// </summary>
-    /// <param name="Body">information for the conversion.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">information for the conversion.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Conversion</returns>
-    Task<Conversion> JobsJobIdConversionsPostAsync (Conversion Body, string Token, string Key, string JobId);
+    Task<Conversion> JobsJobIdConversionsPostAsync (Conversion Body, string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    Conversion JobsJobIdConversionsConversionIdGet (string Token, string Key, string JobId, string ConversionId);
+    Conversion JobsJobIdConversionsConversionIdGet (string XOcToken, string XOcApiKey, string JobId, string ConversionId);
 
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    Task<Conversion> JobsJobIdConversionsConversionIdGetAsync (string Token, string Key, string JobId, string ConversionId);
+    Task<Conversion> JobsJobIdConversionsConversionIdGetAsync (string XOcToken, string XOcApiKey, string JobId, string ConversionId);
     
     /// <summary>
     /// Removes the conversion for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    Conversion JobsJobIdConversionsConversionIdDelete (string Token, string Key, string JobId, string ConversionId);
+    Conversion JobsJobIdConversionsConversionIdDelete (string XOcToken, string XOcApiKey, string JobId, string ConversionId);
 
     /// <summary>
     /// Removes the conversion for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    Task<Conversion> JobsJobIdConversionsConversionIdDeleteAsync (string Token, string Key, string JobId, string ConversionId);
+    Task<Conversion> JobsJobIdConversionsConversionIdDeleteAsync (string XOcToken, string XOcApiKey, string JobId, string ConversionId);
     
   }
 
@@ -122,9 +122,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Conversion></returns>
-    public List<Conversion> JobsJobIdConversionsGet (string Token, string Key, string JobId) {
+    public List<Conversion> JobsJobIdConversionsGet (string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -143,8 +143,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -164,9 +164,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Conversion></returns>
-    public async Task<List<Conversion>> JobsJobIdConversionsGetAsync (string Token, string Key, string JobId) {
+    public async Task<List<Conversion>> JobsJobIdConversionsGetAsync (string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -185,8 +185,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -205,9 +205,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Adds a new conversion to the given job. 
     /// </summary>
-    /// <param name="Body">information for the conversion.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">information for the conversion.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Conversion</returns>
-    public Conversion JobsJobIdConversionsPost (Conversion Body, string Token, string Key, string JobId) {
+    public Conversion JobsJobIdConversionsPost (Conversion Body, string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'Body' is set
@@ -229,8 +229,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -251,9 +251,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Adds a new conversion to the given job. 
     /// </summary>
-    /// <param name="Body">information for the conversion.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">information for the conversion.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Conversion</returns>
-    public async Task<Conversion> JobsJobIdConversionsPostAsync (Conversion Body, string Token, string Key, string JobId) {
+    public async Task<Conversion> JobsJobIdConversionsPostAsync (Conversion Body, string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'Body' is set
@@ -275,8 +275,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -296,9 +296,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    public Conversion JobsJobIdConversionsConversionIdGet (string Token, string Key, string JobId, string ConversionId) {
+    public Conversion JobsJobIdConversionsConversionIdGet (string XOcToken, string XOcApiKey, string JobId, string ConversionId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -321,8 +321,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -342,9 +342,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Get list of conversions defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    public async Task<Conversion> JobsJobIdConversionsConversionIdGetAsync (string Token, string Key, string JobId, string ConversionId) {
+    public async Task<Conversion> JobsJobIdConversionsConversionIdGetAsync (string XOcToken, string XOcApiKey, string JobId, string ConversionId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -367,8 +367,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -387,9 +387,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Removes the conversion for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    public Conversion JobsJobIdConversionsConversionIdDelete (string Token, string Key, string JobId, string ConversionId) {
+    public Conversion JobsJobIdConversionsConversionIdDelete (string XOcToken, string XOcApiKey, string JobId, string ConversionId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -412,8 +412,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -433,9 +433,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Removes the conversion for a job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>/// <param name="ConversionId">Identifier for the job conversion.</param>
     /// <returns>Conversion</returns>
-    public async Task<Conversion> JobsJobIdConversionsConversionIdDeleteAsync (string Token, string Key, string JobId, string ConversionId) {
+    public async Task<Conversion> JobsJobIdConversionsConversionIdDeleteAsync (string XOcToken, string XOcApiKey, string JobId, string ConversionId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -458,8 +458,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       

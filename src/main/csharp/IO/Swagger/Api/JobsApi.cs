@@ -13,86 +13,86 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// List of jobs active for the current user identified by the key. It will return the list of jobs for the given user. In order to get the jobs a key or token must be provided:\n  - If the user key is provided all jobs for the current will be return.\n  - If one token is provided it will return the job assigned to that token if any.\n  \nThe request is paginated with an amount of 50 elements per page in any case.\n
     /// </summary>
-    /// <param name="Status">Filter the status of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
+    /// <param name="Status">Filter the status of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
     /// <returns>List<Job></returns>
-    List<Job> JobsGet (string Status, string Token, string Key, double? Page);
+    List<Job> JobsGet (string Status, string XOcToken, string XOcApiKey, double? Page);
 
     /// <summary>
     /// List of jobs active for the current user identified by the key. It will return the list of jobs for the given user. In order to get the jobs a key or token must be provided:\n  - If the user key is provided all jobs for the current will be return.\n  - If one token is provided it will return the job assigned to that token if any.\n  \nThe request is paginated with an amount of 50 elements per page in any case.\n
     /// </summary>
-    /// <param name="Status">Filter the status of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
+    /// <param name="Status">Filter the status of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
     /// <returns>List<Job></returns>
-    Task<List<Job>> JobsGetAsync (string Status, string Token, string Key, double? Page);
+    Task<List<Job>> JobsGetAsync (string Status, string XOcToken, string XOcApiKey, double? Page);
     
     /// <summary>
     /// Creates a new Job with the user key. 
     /// </summary>
-    /// <param name="Key">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
+    /// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
     /// <returns>Job</returns>
-    Job JobsPost (string Key, Job Body);
+    Job JobsPost (string XOcApiKey, Job Body);
 
     /// <summary>
     /// Creates a new Job with the user key. 
     /// </summary>
-    /// <param name="Key">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
+    /// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
     /// <returns>Job</returns>
-    Task<Job> JobsPostAsync (string Key, Job Body);
+    Task<Job> JobsPostAsync (string XOcApiKey, Job Body);
     
     /// <summary>
     /// Get information about a Job 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    Job JobsJobIdGet (string Token, string Key, string JobId);
+    Job JobsJobIdGet (string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Get information about a Job 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    Task<Job> JobsJobIdGetAsync (string Token, string Key, string JobId);
+    Task<Job> JobsJobIdGetAsync (string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Cancels a job created that haven&#39;t been started. (Allow to cancel jobs in process.) 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    Job JobsJobIdDelete (string Token, string Key, string JobId);
+    Job JobsJobIdDelete (string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Cancels a job created that haven&#39;t been started. (Allow to cancel jobs in process.) 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    Task<Job> JobsJobIdDeleteAsync (string Token, string Key, string JobId);
+    Task<Job> JobsJobIdDeleteAsync (string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Modifies the job identified by the id, allows to start a created job. 
     /// </summary>
-    /// <param name="Body">Content of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">Content of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    Job JobsJobIdPatch (Job Body, string Token, string Key, string JobId);
+    Job JobsJobIdPatch (Job Body, string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Modifies the job identified by the id, allows to start a created job. 
     /// </summary>
-    /// <param name="Body">Content of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">Content of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    Task<Job> JobsJobIdPatchAsync (Job Body, string Token, string Key, string JobId);
+    Task<Job> JobsJobIdPatchAsync (Job Body, string XOcToken, string XOcApiKey, string JobId);
     
     /// <summary>
     /// Get list of threads defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Thread></returns>
-    List<Thread> JobsJobIdThreadsGet (string Token, string Key, string JobId);
+    List<Thread> JobsJobIdThreadsGet (string XOcToken, string XOcApiKey, string JobId);
 
     /// <summary>
     /// Get list of threads defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Thread></returns>
-    Task<List<Thread>> JobsJobIdThreadsGetAsync (string Token, string Key, string JobId);
+    Task<List<Thread>> JobsJobIdThreadsGetAsync (string XOcToken, string XOcApiKey, string JobId);
     
   }
 
@@ -150,9 +150,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// List of jobs active for the current user identified by the key. It will return the list of jobs for the given user. In order to get the jobs a key or token must be provided:\n  - If the user key is provided all jobs for the current will be return.\n  - If one token is provided it will return the job assigned to that token if any.\n  \nThe request is paginated with an amount of 50 elements per page in any case.\n
     /// </summary>
-    /// <param name="Status">Filter the status of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
+    /// <param name="Status">Filter the status of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
     /// <returns>List<Job></returns>
-    public List<Job> JobsGet (string Status, string Token, string Key, double? Page) {
+    public List<Job> JobsGet (string Status, string XOcToken, string XOcApiKey, double? Page) {
 
       
 
@@ -169,8 +169,8 @@ namespace IO.Swagger.Api {
        if (Status != null) queryParams.Add("status", apiClient.ParameterToString(Status)); // query parameter
        if (Page != null) queryParams.Add("page", apiClient.ParameterToString(Page)); // query parameter
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -190,9 +190,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// List of jobs active for the current user identified by the key. It will return the list of jobs for the given user. In order to get the jobs a key or token must be provided:\n  - If the user key is provided all jobs for the current will be return.\n  - If one token is provided it will return the job assigned to that token if any.\n  \nThe request is paginated with an amount of 50 elements per page in any case.\n
     /// </summary>
-    /// <param name="Status">Filter the status of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
+    /// <param name="Status">Filter the status of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Page">Pagination for list of elements.</param>
     /// <returns>List<Job></returns>
-    public async Task<List<Job>> JobsGetAsync (string Status, string Token, string Key, double? Page) {
+    public async Task<List<Job>> JobsGetAsync (string Status, string XOcToken, string XOcApiKey, double? Page) {
 
       
 
@@ -209,8 +209,8 @@ namespace IO.Swagger.Api {
        if (Status != null) queryParams.Add("status", apiClient.ParameterToString(Status)); // query parameter
        if (Page != null) queryParams.Add("page", apiClient.ParameterToString(Page)); // query parameter
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -229,13 +229,13 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Creates a new Job with the user key. 
     /// </summary>
-    /// <param name="Key">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
+    /// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
     /// <returns>Job</returns>
-    public Job JobsPost (string Key, Job Body) {
+    public Job JobsPost (string XOcApiKey, Job Body) {
 
       
-      // verify the required parameter 'Key' is set
-      if (Key == null) throw new ApiException(400, "Missing required parameter 'Key' when calling JobsPost");
+      // verify the required parameter 'XOcApiKey' is set
+      if (XOcApiKey == null) throw new ApiException(400, "Missing required parameter 'XOcApiKey' when calling JobsPost");
       
       // verify the required parameter 'Body' is set
       if (Body == null) throw new ApiException(400, "Missing required parameter 'Body' when calling JobsPost");
@@ -252,7 +252,7 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -273,13 +273,13 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Creates a new Job with the user key. 
     /// </summary>
-    /// <param name="Key">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
+    /// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="Body">Content of the job.</param>
     /// <returns>Job</returns>
-    public async Task<Job> JobsPostAsync (string Key, Job Body) {
+    public async Task<Job> JobsPostAsync (string XOcApiKey, Job Body) {
 
       
-          // verify the required parameter 'Key' is set
-          if (Key == null) throw new ApiException(400, "Missing required parameter 'Key' when calling JobsPost");
+          // verify the required parameter 'XOcApiKey' is set
+          if (XOcApiKey == null) throw new ApiException(400, "Missing required parameter 'XOcApiKey' when calling JobsPost");
       
           // verify the required parameter 'Body' is set
           if (Body == null) throw new ApiException(400, "Missing required parameter 'Body' when calling JobsPost");
@@ -296,7 +296,7 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -316,9 +316,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get information about a Job 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    public Job JobsJobIdGet (string Token, string Key, string JobId) {
+    public Job JobsJobIdGet (string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -337,8 +337,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -358,9 +358,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Get information about a Job 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    public async Task<Job> JobsJobIdGetAsync (string Token, string Key, string JobId) {
+    public async Task<Job> JobsJobIdGetAsync (string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -379,8 +379,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -399,9 +399,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Cancels a job created that haven&#39;t been started. (Allow to cancel jobs in process.) 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    public Job JobsJobIdDelete (string Token, string Key, string JobId) {
+    public Job JobsJobIdDelete (string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -420,8 +420,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -441,9 +441,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Cancels a job created that haven&#39;t been started. (Allow to cancel jobs in process.) 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    public async Task<Job> JobsJobIdDeleteAsync (string Token, string Key, string JobId) {
+    public async Task<Job> JobsJobIdDeleteAsync (string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -462,8 +462,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -482,9 +482,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Modifies the job identified by the id, allows to start a created job. 
     /// </summary>
-    /// <param name="Body">Content of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">Content of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    public Job JobsJobIdPatch (Job Body, string Token, string Key, string JobId) {
+    public Job JobsJobIdPatch (Job Body, string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'Body' is set
@@ -506,8 +506,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -528,9 +528,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Modifies the job identified by the id, allows to start a created job. 
     /// </summary>
-    /// <param name="Body">Content of the job.</param>/// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="Body">Content of the job.</param>/// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>Job</returns>
-    public async Task<Job> JobsJobIdPatchAsync (Job Body, string Token, string Key, string JobId) {
+    public async Task<Job> JobsJobIdPatchAsync (Job Body, string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'Body' is set
@@ -552,8 +552,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       postBody = apiClient.Serialize(Body); // http body (model) parameter
@@ -573,9 +573,9 @@ namespace IO.Swagger.Api {
     /// <summary>
     /// Get list of threads defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Thread></returns>
-    public List<Thread> JobsJobIdThreadsGet (string Token, string Key, string JobId) {
+    public List<Thread> JobsJobIdThreadsGet (string XOcToken, string XOcApiKey, string JobId) {
 
       
       // verify the required parameter 'JobId' is set
@@ -594,8 +594,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       
@@ -615,9 +615,9 @@ namespace IO.Swagger.Api {
 	 /// <summary>
     /// Get list of threads defined for the current job. 
     /// </summary>
-    /// <param name="Token">Token for authentication.</param>/// <param name="Key">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
+    /// <param name="XOcToken">Token for authentication for the current job</param>/// <param name="XOcApiKey">Api key for the user to filter.</param>/// <param name="JobId">ID of job that needs to be fetched</param>
     /// <returns>List<Thread></returns>
-    public async Task<List<Thread>> JobsJobIdThreadsGetAsync (string Token, string Key, string JobId) {
+    public async Task<List<Thread>> JobsJobIdThreadsGetAsync (string XOcToken, string XOcApiKey, string JobId) {
 
       
           // verify the required parameter 'JobId' is set
@@ -636,8 +636,8 @@ namespace IO.Swagger.Api {
       String postBody = null;
 
       
-       if (Token != null) headerParams.Add("token", apiClient.ParameterToString(Token)); // header parameter
-       if (Key != null) headerParams.Add("key", apiClient.ParameterToString(Key)); // header parameter
+       if (XOcToken != null) headerParams.Add("X-Oc-Token", apiClient.ParameterToString(XOcToken)); // header parameter
+       if (XOcApiKey != null) headerParams.Add("X-Oc-Api-Key", apiClient.ParameterToString(XOcApiKey)); // header parameter
       
       
       

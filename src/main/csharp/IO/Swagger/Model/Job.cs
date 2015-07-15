@@ -38,11 +38,6 @@ namespace IO.Swagger.Model {
     public bool? Process { get; set; }
 
     
-    /* Determine if it is a test job. */
-    [DataMember(Name="test", EmitDefaultValue=false)]
-    public bool? Test { get; set; }
-
-    
     /* Type of conversion or conversions to be carried out. */
     [DataMember(Name="conversion", EmitDefaultValue=false)]
     public List<Conversion> Conversion { get; set; }
@@ -91,8 +86,6 @@ namespace IO.Swagger.Model {
       sb.Append("  Status: ").Append(Status).Append("\n");
       
       sb.Append("  Process: ").Append(Process).Append("\n");
-      
-      sb.Append("  Test: ").Append(Test).Append("\n");
       
       sb.Append("  Conversion: ").Append(Conversion).Append("\n");
       
